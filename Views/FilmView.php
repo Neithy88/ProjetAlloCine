@@ -11,7 +11,7 @@
 
     <h1><?=$page?></h1>
 
-    <h2><?=$movie['titre']?></h2> <img src= <? 'ProjetAlloCine/Views/image/'.$movie['image']?>>
+    <h2><?=$movie['titre']?></h2>
 
     <h2><?=$gender['genre']?></h2>
     
