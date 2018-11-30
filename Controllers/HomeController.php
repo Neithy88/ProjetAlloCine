@@ -2,7 +2,7 @@
 
 //le controlleur inclut le modèle
 include('Models/Film.php');
-include('Models/Genre.php');
+
 
 
 

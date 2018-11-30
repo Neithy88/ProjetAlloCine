@@ -2,7 +2,7 @@
 
 //le controlleur inclut le ou les modèles
 include('Models/Film.php');
-include('Models/Genre.php');
+
 
 
 //Récupérer les données (ici, on est sur la page d'un film précis donc on récupère un seul film en fonction de l'ID)
