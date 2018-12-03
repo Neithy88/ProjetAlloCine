@@ -1,3 +1,4 @@
+<!-- Pas de HTML dans les models et controllers : première balise HTML dans la vue-->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -26,27 +27,30 @@
 </head>
 <body>
 
- <header>
+    <header>
     <!-- Navigation -->
         <nav class="navbar navbar-expand-lg navbar-dark navbar-custom fixed-top">
             <div class="container">
-                <a class="navbar-brand" href="#"><img src ="Views/image/logo2.png" alt='logo Movies'></a>
+                <a class="navbar-brand" href="Home"><img src ="Views/image/logo2.png" alt='logo Movies'></a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarResponsive">
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item">
-                    <a class="nav-link" href="?page=Home">Home</a>
+                    <a class="nav-link" href="Home">Home</a>
                     </li>
                     <li class="nav-item">
-                    <a class="nav-link" href="?page=Genre">Genre</a>
+                    <a class="nav-link" href="Genre">Genre</a>
                     </li>
                     <li class="nav-item">
-                    <a class="nav-link" href="?page=Acteur">Acteur</a>
+                    <a class="nav-link" href="Acteur">Acteur</a>
                     </li>
                     <li class="nav-item">
-                    <a class="nav-link" href="?page=Realisateur">Réalisateur</a>
+                    <a class="nav-link" href="Realisateur">Réalisateur</a>
+                    </li>
+                    <li class="nav-item">
+                    <a class="nav-link" href="">Ajoute ton film :)</a>
                     </li>
                 </ul>
                 </div>
@@ -54,57 +58,54 @@
         </nav>
 
     </header>
+    <!-- End Nav -->
 
+
+    <!-- Start Main -->
     <main role="main">
 
         <div class="container">
             <div class="row">
-                <h1><?=$page?> :</h1>
+        
+                
 
+                <div class="col md-6 ">
                 <h2><?=$movie['titre']?></h2>
-                <div class="card mb-12 shadow-sm">
+                    <ul>
+                        
+                        <li><h3>Année de sortie :</h3> <?=$movie['annee']?></li>
+                        <li><h3>Réalisé par :</h3> <?php foreach ($realisateur as $key => $realisateur) {
+                        echo $realisateur['nom'].' '.$realisateur['prenom'];}?></li>
+                        <li><h3>Genre :</h3> <?php foreach ($genre as $key => $genre) {
+                        echo $genre['genre'].' ';}?></li>
+                        <li><h3>Acteurs :</h3> <?php
+                            foreach ($actors as $key => $actors) {
+                            echo $actors['nom'].' '.$actors['prenom'];} ?>
+                        </li>
+
+                    </ul>
+                </div>
+                <div class="col md-6">
                     <img class="card-img-top" src= "<?= 'Views/image/'.$movie['image']?>"alt="<?=$movie['titre']?>">
                 </div>
 
-                <div class="card mb-12 shadow-sm">
-                    <ul>
-                        <li><h4>Année de sortie :</h4> <?=$movie['annee']?></li>
-                        <li><h4>Réalisé par</h4> <?=$realisateur['realisateur']?></li>
-                        <li><h4>Genre :</h4> <?php
+                
 
-
-
-                        foreach ($genre as $key => $genre) {
-                        echo $genre['genre'].' ';
-
-                        } 
-
-                        // A trouver plus trd, comment enlever la dernière virgule :
-                        //echo trim($test, ',');
-                        // echo 'substr';
-                        // echo substr($test, 0, strpos($test, ','));
-
-                        ?>
-                        </li>
-                        <li><h4>Acteurs :</h4> <?php
-
-                        foreach ($actors as $key => $actors) {
-                        echo $actors['acteurs'].', ';
-
-                        } 
-                        ?></li>
-                    </ul>
-                </div>
-
-                <h4>Synopsis :</h4>
+            </div>
+        </div>
+        
+        <div class="container">
+            <div class="row">
+            <h4>Synopsis :</h4>
                 <p><?=$movie['description']?></p>
 
                 <div class="btn-group">
-                    <button type="button" class="btn btn-sm btn-outline-secondary"><a href="?page=Home">Retour</a></button>
+                    <button type="button" class="btn btn-sm btn-outline-secondary"><a href="Home">Retour</a></button>
                 </div>
 
             </div>
         </div>
+
     </main>
     
      <!-- Bootstrap core JavaScript

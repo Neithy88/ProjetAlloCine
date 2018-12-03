@@ -1,10 +1,8 @@
 
-html{
-    background-color : grey;
-}
 
 main{
-	margin-top: 10%;
+    margin-top:50px;
+    padding-top: 5%;
 }
 
 .card-img-top {
@@ -12,6 +10,14 @@ main{
     max-width: 100%;
     border-top-left-radius: calc(.25rem - 1px);
     border-top-right-radius: calc(.25rem - 1px);
+}
+.py-5 {
+  padding-top:50px!important;
+
+}
+
+.genre{
+	margin-top: 50%;
 }
 
 

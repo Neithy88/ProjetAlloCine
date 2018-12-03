@@ -38,19 +38,19 @@
                 <div class="collapse navbar-collapse" id="navbarResponsive">
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item">
-                    <a class="nav-link" href="?page=Home">Home</a>
+                    <a class="nav-link" href="#">Home</a>
                     </li>
                     <li class="nav-item">
-                    <a class="nav-link" href="?page=Genre">Genre</a>
+                    <a class="nav-link" href="Genre">Genre</a>
                     </li>
                     <li class="nav-item">
-                    <a class="nav-link" href="?page=Acteur">Acteur</a>
+                    <a class="nav-link" href="Acteur">Acteur</a>
                     </li>
                     <li class="nav-item">
-                    <a class="nav-link" href="?page=Realisateur">Réalisateur</a>
+                    <a class="nav-link" href="Realisateur">Réalisateur</a>
                     </li>
                     <li class="nav-item">
-                    <a class="nav-link" href="?page=Realisateur">Ajoute ton film :)</a>
+                    <a class="nav-link" href="">Ajoute ton film :)</a>
                     </li>
                 </ul>
                 </div>

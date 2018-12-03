@@ -6,6 +6,7 @@
 
 body {
   font-family: 'Lato', sans-serif;
+  background-color:rgba(36, 35, 34, 0.678);
 }
 
 h1,
@@ -27,7 +28,7 @@ h6 {
 }
 
 .bg-black {
-  background-color: #000 !important;
+  background-color: rgb(17, 17, 17) !important;
 }
 
 .rounded-pill {
@@ -38,7 +39,7 @@ h6 {
   padding-top: 1rem;
   padding-bottom: 1rem;
   background-color: rgba(0, 0, 0, 0.7);
-  margin-bottom: 10%;
+  
 }
 
 .navbar-custom .navbar-brand {
@@ -55,77 +56,11 @@ h6 {
   letter-spacing: 0.1rem;
 }
 
-header.masthead {
-  position: relative;
-  overflow: hidden;
-  padding-top: calc(7rem + 72px);
-  padding-bottom: 7rem;
-  background: -webkit-gradient(linear, left bottom, left top, from(#ff6a00), to(#ee0979));
-  background: linear-gradient(0deg, #ff6a00 0%, #ee0979 100%);
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-attachment: scroll;
-  background-size: cover;
+.py-5 {
+  padding-top:50px!important;
+
+}
+.genre{
+  margin-top: 20%;
 }
 
-header.masthead .masthead-content {
-  z-index: 1;
-  position: relative;
-}
-
-header.masthead .masthead-content .masthead-heading {
-  font-size: 4rem;
-}
-
-header.masthead .masthead-content .masthead-subheading {
-  font-size: 2rem;
-}
-
-
-
-@media (min-width: 992px) {
-  header.masthead {
-    padding-top: calc(10rem + 55px);
-    padding-bottom: 10rem;
-  }
-  header.masthead .masthead-content .masthead-heading {
-    font-size: 6rem;
-  }
-  header.masthead .masthead-content .masthead-subheading {
-    font-size: 4rem;
-  }
-}
-
-.bg-primary {
-  background-color: #ee0979 !important;
-}
-
-.btn-primary {
-  background-color: #ee0979;
-  border-color: #ee0979;
-}
-
-.btn-primary:active, .btn-primary:focus, .btn-primary:hover {
-  background-color: #bd0760 !important;
-  border-color: #bd0760 !important;
-}
-
-.btn-primary:focus {
-  -webkit-box-shadow: 0 0 0 0.2rem rgba(238, 9, 121, 0.5);
-  box-shadow: 0 0 0 0.2rem rgba(238, 9, 121, 0.5);
-}
-
-.btn-secondary {
-  background-color: #ff6a00;
-  border-color: #ff6a00;
-}
-
-.btn-secondary:active, .btn-secondary:focus, .btn-secondary:hover {
-  background-color: #cc5500 !important;
-  border-color: #cc5500 !important;
-}
-
-.btn-secondary:focus {
-  -webkit-box-shadow: 0 0 0 0.2rem rgba(255, 106, 0, 0.5);
-  box-shadow: 0 0 0 0.2rem rgba(255, 106, 0, 0.5);
-}
