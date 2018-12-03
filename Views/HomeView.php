@@ -33,7 +33,7 @@
             <a class="nav-link" href="#">Home</a>
           </li>
           <li class="nav-item active">
-            <a class="nav-link" href="#">Genre</a>
+            <a class="nav-link" href="Genre">Genre</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#">Acteur</a>

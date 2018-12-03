@@ -10,7 +10,7 @@ $id = 2; //Je prends un id arbitrairement, il devra provenir de l'URL en réalit
 $movie = getOneMovie($id);
 $gender = getOneGender($id);
 
-
+$selectedgender = getIdFromGender("Sport");
 //traiter les données
 $movie['description'] = ucfirst($movie['description']); //Mets une majuscule au nom du réalisateur
 $gender['genre'] = ucfirst($gender['genre']);
