@@ -1,4 +1,11 @@
 
+html{
+    background-color : grey;
+}
+
+main{
+	margin-top: 10%;
+}
 
 .card-img-top {
     max-height:100%;
@@ -6,3 +13,5 @@
     border-top-left-radius: calc(.25rem - 1px);
     border-top-right-radius: calc(.25rem - 1px);
 }
+
+
