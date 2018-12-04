@@ -62,25 +62,27 @@
 
 
     <!-- Start Main -->
-    <main role="main">
+    <main role="main" id="mainview">
 
         <div class="container">
             <div class="row">
         
-                
 
                 <div class="col md-6 ">
-                <h2><?=$movie['titre']?></h2>
+                <h2><img src="Views/image/clapperboard1.png" alt="claplogo" id="clapp"><?=$movie['titre']?></h2>
                     <ul>
-                        
+                    
                         <li><h3>Année de sortie :</h3> <?=$movie['annee']?></li>
-                        <li><h3>Réalisé par :</h3> <?php foreach ($realisateur as $key => $realisateur) {
-                        echo $realisateur['nom'].' '.$realisateur['prenom'];}?></li>
-                        <li><h3>Genre :</h3> <?php foreach ($genre as $key => $genre) {
+                        <li><h3>Réalisé par :</h3> 
+                        <?php foreach ($realisateurs as $key => $realisateur) {
+                            echo $realisateur['prenom'].' '.$realisateur['nom'];
+                        } ?> 
+                        </li>
+                        <li><h3>Genre :</h3> <?php foreach ($genres as $key => $genre) {
                         echo $genre['genre'].' ';}?></li>
                         <li><h3>Acteurs :</h3> <?php
-                            foreach ($actors as $key => $actors) {
-                            echo $actors['nom'].' '.$actors['prenom'];} ?>
+                            foreach ($acteurs as $key => $acteur) {
+                            echo $acteur['prenom'].' '.$acteur['nom'].'<br/>';} ?>
                         </li>
 
                     </ul>
@@ -94,19 +96,27 @@
             </div>
         </div>
         
-        <div class="container">
+        <div class="container" id="description">
             <div class="row">
-            <h4>Synopsis :</h4>
+            <h4><img src="Views/image/camera2.png" alt="claplogo" id="camera">Synopsis :</h4>
                 <p><?=$movie['description']?></p>
 
                 <div class="btn-group">
-                    <button type="button" class="btn btn-sm btn-outline-secondary"><a href="Home">Retour</a></button>
+                    <button type="button" id="btnhome"class="btn btn-sm-warning btn-outline-secondary"><a href="Home">Home</a></button>
                 </div>
 
             </div>
         </div>
 
     </main>
+
+
+    <!-- <footer class="footer">
+      <div class="container">
+       
+        <span class="text-muted">Created by Anjum Heriau, Aurélie Thècle Augustin, Ophélie Donizetti, Alexandra Moullet </span>
+      </div>
+    </footer> -->
     
      <!-- Bootstrap core JavaScript
     ================================================== -->

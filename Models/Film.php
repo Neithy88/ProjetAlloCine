@@ -26,9 +26,12 @@ function getOneMovie($id) {
 function getOneRealisateur($id) {
     global $dbh;
 
-    $realisateur = $dbh->query('SELECT * FROM realisateurs WHERE id_realisateurs='.$id.';');
+    $realisateur = $dbh->query('SELECT r.* 
+        FROM films_realisateurs AS fr 
+        JOIN realisateurs as r ON fr.id_realisateurs = r.id_realisateurs
+        WHERE fr.id_films='.$id.';');
 
-    return $realisateur->fetch();
+    return $realisateur->fetchAll();
 }
 
 function getAllRealisateur() {
@@ -39,6 +42,16 @@ function getAllRealisateur() {
     return $realisateur->fetchAll();
 }
 
+function getOneActeur($id) {
+    global $dbh;
+
+    $acteurs = $dbh->query('SELECT a.* 
+        FROM films_acteurs AS fa 
+        JOIN acteurs as a ON fa.id_acteurs = a.id_acteurs
+        WHERE fa.id_films='.$id.';');
+
+    return $acteurs->fetchAll();
+}
 
 // function getTheActors($id) {
 //     global $dbh;
@@ -54,7 +67,10 @@ function getAllRealisateur() {
 function getMoviesByGenders($gender_id) {
     global $dbh;
 
-    $movies = $dbh->query('SELECT * FROM films JOIN films_genres ON films.id_films = films_genres.id_films JOIN genres ON genres.id_genres= films_genres.id_genres WHERE genres.id_genres='.$gender_id.';');
+    $movies = $dbh->query('SELECT *
+    FROM films_genres.id_films
+    JOIN genres ON genres.id_genres= films_genres.id_genres
+    WHERE genres.id_genres='.$gender_id.';');
 
     return $movies->fetchAll();
 }
@@ -71,9 +87,12 @@ function getAllGenders() {
 function getOneGender($id) {
     global $dbh;
 
-    $genders = $dbh->query('SELECT * FROM genres WHERE id_genres='.$id.';');
+    $genders = $dbh->query('SELECT genres.*
+    FROM films_genres
+    JOIN genres ON genres.id_genres= films_genres.id_genres
+    WHERE films_genres.id_films='.$id.';');
 
-    return $genders->fetch();
+    return $genders->fetchAll();
 }
 
 

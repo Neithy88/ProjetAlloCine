@@ -2,7 +2,7 @@
 <?php
 
 //le controlleur inclut le ou les modèles
-include('Models/Film.php');
+
 include('Models/Acteur.php');
 
 

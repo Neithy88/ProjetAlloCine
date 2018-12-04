@@ -1,83 +1,96 @@
+<!-- Pas de HTML dans les models et controllers : première balise HTML dans la vue-->
 <!DOCTYPE html>
-    <html lang="en">
-    <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-    <title>Annuaire de films - <?=$page?></title>
-    <link rel="stylesheet" href="style.css">
-    </head>
-    <body>
-
-    <h1><?=$page?></h1>
+    <title>Movies & Co - <?=$page?></title>
+    <link rel="stylesheet" href="public/css/style.css">
+     <link href="navbar-top-fixed.css" rel="stylesheet">
+    <link href="public/css/style.css" rel="stylesheet">
+    <script type="text/javascript"></script>
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
 
 
-    <form action="" method="get">
-    <select name='acteur' id="select_id" onchange="getID()">
-    <?php
-    //echo '<label>Genre de film:';
-    //echo "<select name='Genre' onchange=\"getID()\">";
-    foreach ($Allactors as $value) {
-    //echo("<h2>".$value."</h2>");
-    echo '<option value="' .$value['id_acteurs']. '">' .$value['nom'].' '.$value['prenom'].'</option>';
-    }
+    <!-- Personne ne modifie rien dans la page HomeView
+    pour chaque nav : genre, acteur realisateur realisé un fichier view + un fichier model en s'inspirant de ce qu 'on a fait pour afficher tout les films de la page Home View'
+    Anjum = Genre 
+    Ophélie = Acteur
+    Aurélie = Réalisateur
+    Alex = img de la home vers filmphp-->
+    
+     <!-- Bootstrap core CSS -->
+     <link href="public/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+     <!-- Custom styles for this template -->
+    <link href="public/css/one-page-wonder.css" rel="stylesheet">
+</head>
+<body>
 
+    <header>
+    <!-- Navigation -->
+        <nav class="navbar navbar-expand-lg navbar-dark navbar-custom fixed-top">
+            <div class="container">
+                <a class="navbar-brand" href="Home"><img src ="Views/image/logo2.png" alt='logo Movies'></a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                    <a class="nav-link" href="Home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                    <a class="nav-link" href="Genre">Genre</a>
+                    </li>
+                    <li class="nav-item">
+                    <a class="nav-link" href="Acteur">Acteur</a>
+                    </li>
+                    <li class="nav-item">
+                    <a class="nav-link" href="Realisateur">Réalisateur</a>
+                    </li>
+                    <li class="nav-item">
+                    <a class="nav-link" href="">Ajoute ton film :)</a>
+                    </li>
+                </ul>
+                </div>
+            </div>
+        </nav>
 
-    echo "</select>";
-
-    ?>
-    <button>Valider</button>
-    </form>
-    <main role="main">
-
-
-    <div class="album py-5 bg-light">
-
+    </header>
+    <!-- End Nav -->
     <div class="container">
+        <div class="row">
+            <form action="" method="get">
+                <select name='acteur' id="select_id" onchange="getID()">
+                <?php
+                //echo '<label>Genre de film:';
+                //echo "<select name='Genre' onchange=\"getID()\">";
+                foreach ($Allactors as $value) {
+                //echo("<h2>".$value."</h2>");
+                echo '<option value="' .$value['id_acteurs']. '">' .$value['nom'].' '.$value['prenom'].'</option>';
+                }
 
-    <div class="row">
-    <?php foreach ($acteurs as $key => $acteurs) : ?>
-    <div class="col-md-4">
-    <div class="card mb-4 shadow-sm">
 
+                echo "</select>";
 
-    <img class="card-img-top" src= "<?= 'Views/image/'.$acteurs['image']?>"alt="<?=$acteurs['titre']?>">
-    <div class="card-body">
+                ?>
+                <button>Valider</button>
+            </form>
 
-    <div class="d-flex justify-content-between align-items-center">
-    <div class="btn-group">
-
-    <a href="<?='Film?filmId='.$acteurs['id_films']?>">Details</a>
+        </div>
     </div>
-
-    </div>
-    </div>
-    </div>
-    </div>
-    <?php endforeach; ?>
-    </div>
+   
+    
 
 
-    </div>
-
-    </div>
-
-    </main>
-
-
-
-    <!-- Bootstrap core JavaScript
+<!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
-    <script src="../../assets/js/vendor/popper.min.js"></script>
-    <script src="../../dist/js/bootstrap.min.js"></script>
-    <script src="../../assets/js/vendor/holder.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
+    <script src="https://getbootstrap.com/docs/3.3/dist/js/bootstrap.min.js"></script>
+    <script src="https://getbootstrap.com/docs/3.3/assets/js/ie10-viewport-bug-workaround.js"></script>
     <script>
     function getID() {
     d = document.getElementById("select_id").value;
