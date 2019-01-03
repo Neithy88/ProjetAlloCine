@@ -56,7 +56,7 @@
                 </div>
             </div>
         </nav>
-
+        
     </header>
     <!-- End Nav -->
     <div class="container">
@@ -66,9 +66,9 @@
                 <?php
                 //echo '<label>Genre de film:';
                 //echo "<select name='Genre' onchange=\"getID()\">";
-                foreach ($Allactors as $value) {
+                foreach ($Allactors as $key => $acteur) {
                 //echo("<h2>".$value."</h2>");
-                echo '<option value="' .$value['id_acteurs']. '">' .$value['nom'].' '.$value['prenom'].'</option>';
+                echo '<option value="' .$acteur['id_acteurs']. '">' .$acteur['prenom'].' '.$Acteur['nom'].'</option>';
                 }
 
 

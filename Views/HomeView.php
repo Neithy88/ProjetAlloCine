@@ -80,7 +80,7 @@
                                                 <a href="<?='Film?filmId='.$movie['id_films']?>">Details</a>
                                             </button>
                                         </div>
-                                   
+                                       
                                         <small class="text-muted"><?= $movie['annee']?></small>
                                     </div>
                                 </div>

@@ -11,10 +11,10 @@ function getMoviesByActors($id_acteurs) {
     global $dbh;
     // $actors = $dbh->query('SELECT * FROM acteurs');
 
-    $Allactors= $dbh->query('SELECT * FROM films JOIN films_acteurs  ON films.id_films = films_acteurs.id_films WHERE films_acteurs.id_acteurs='.$id_acteurs.';');
+    $id_acteurs= $dbh->query('SELECT * FROM films JOIN films_acteurs  ON films.id_films = films_acteurs.id_films WHERE films_acteurs.id_acteurs='.$id_acteurs.';');
 
     // ('SELECT * FROM acteurs JOIN films.id_acteurs ON films.id_films = films_acteurs.id_films WHERE films.id_acteurs='.$id_acteurs.';');
-    return $Allactors->fetchAll();
+    return $id_acteurs->fetchAll();
 }
 
 function getAllActors() {
@@ -25,3 +25,14 @@ function getAllActors() {
     //return $Allgenders->fetchAll(PDO::FETCH_COLUMN, 0);
     
     } 
+
+    // function getMoviesByActors($acteur_id) {
+    //     global $dbh;
+    
+    //     $acteur_id = $dbh->query('SELECT *
+    //     FROM films_acteurs.id_films
+    //     JOIN acteurs ON acteurs.id_acteurs= films_acteurs.id_acteurs
+    //     WHERE acteurs.id_acteurs='.$acteur_id.';');
+    
+    //     return $acteur_id->fetchAll();
+    // }
