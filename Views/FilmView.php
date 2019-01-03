@@ -84,6 +84,83 @@
                             foreach ($acteurs as $key => $acteur) {
                             echo $acteur['prenom'].' '.$acteur['nom'].'<br/>';} ?>
                         </li>
+                        
+                        <li><h3>Note :</h3> 
+
+
+                        <!-- SANS  BASE DE DONNEES DIRECTEMENT SUR L API  -->
+
+                        <!-- recuperer l id sur l api -->
+                        <?php 
+                        $curl = curl_init();
+                        $url = "http://www.omdbapi.com/?s=".urlencode($movie['titre'])."&apikey=aa168fab";
+                        curl_setopt_array($curl, array(
+                        CURLOPT_URL => $url,
+                        CURLOPT_RETURNTRANSFER => true,
+                        CURLOPT_TIMEOUT => 30,
+                        CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+                        CURLOPT_CUSTOMREQUEST => "GET",
+                        CURLOPT_HTTPHEADER => array(
+                            "cache-control: no-cache"
+                        ),
+                        ));
+                        $response = curl_exec($curl);
+                        $err = curl_error($curl);
+                        curl_close($curl);
+
+                        $response = json_decode($response, true); //because of true, it's in an array
+                       
+
+                        // afficher la reponse depuis l api
+
+                        $curl = curl_init();
+                        $url = "http://www.omdbapi.com/?i=". $response['Search'][0]['imdbID']."&apikey=aa168fab";
+                        curl_setopt_array($curl, array(
+                        CURLOPT_URL => $url,
+                        CURLOPT_RETURNTRANSFER => true,
+                        CURLOPT_TIMEOUT => 30,
+                        CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+                        CURLOPT_CUSTOMREQUEST => "GET",
+                        CURLOPT_HTTPHEADER => array(
+                            "cache-control: no-cache"
+                        ),
+                        ));
+                        $response = curl_exec($curl);
+                        $err = curl_error($curl);
+                        curl_close($curl);
+
+                        $response = json_decode($response, true); //because of true, it's in an array
+                        echo $response['Ratings'][0]['Value']."<br>";
+
+
+
+
+
+
+                        // AVEC ENTREE ID IMDB DANS BASE DE DONNEES
+
+                        $curl = curl_init();
+                        $url = "http://www.omdbapi.com/?i=".$movie['imdbID']."&apikey=aa168fab";
+                        curl_setopt_array($curl, array(
+                        CURLOPT_URL => $url,
+                        CURLOPT_RETURNTRANSFER => true,
+                        CURLOPT_TIMEOUT => 30,
+                        CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+                        CURLOPT_CUSTOMREQUEST => "GET",
+                        CURLOPT_HTTPHEADER => array(
+                            "cache-control: no-cache"
+                        ),
+                        ));
+                        $response = curl_exec($curl);
+                        $err = curl_error($curl);
+                        curl_close($curl);
+
+                        $response = json_decode($response, true); //because of true, it's in an array
+                        echo "Note IMDB : ".$response['Ratings'][0]['Value']."<br>";
+
+                        ?>
+ 
+                    </li>
 
                     </ul>
                 </div>
