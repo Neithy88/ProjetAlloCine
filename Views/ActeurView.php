@@ -70,7 +70,10 @@
                 //echo("<h2>".$value."</h2>");
                 echo '<option value="' .$acteur['id_acteurs']. '">' .$acteur['prenom'].' '.$Acteur['nom'].'</option>';
                 }
+
+
                 echo "</select>";
+
                 ?>
                 <button>Valider</button>
             </form>
