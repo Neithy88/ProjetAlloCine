@@ -31,14 +31,14 @@
     <!-- Navigation -->
         <nav class="navbar navbar-expand-lg navbar-dark navbar-custom fixed-top">
             <div class="container">
-                <a class="navbar-brand" href="#"><img src ="Views/image/logo2.png" alt='logo Movies'></a>
+                <a class="navbar-brand" href="Home"><img src ="Views/image/logo2.png" alt='logo Movies'></a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarResponsive">
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item">
-                    <a class="nav-link" href="#">Home</a>
+                    <a class="nav-link" href="Home">Home</a>
                     </li>
                     <li class="nav-item">
                     <a class="nav-link" href="Genre">Genre</a>
@@ -56,53 +56,44 @@
                 </div>
             </div>
         </nav>
-
-    </header>
-    
-    <main role="main">
-       
         
-        <div class="album py-5 bg-light">
-            
-            <div class="container">
-              
-                <div class="row">
-                <?php foreach ($movies as $key => $movie) : ?>
-                    <div class="col-md-4">
-                        <div class="card mb-4 shadow-sm">
-                            <img class="card-img-top" src= "<?= 'Views/image/'.$movie['image']?>"alt="<?=$movie['titre']?>">
-                                <div class="card-body">
-                                
-                                    <div class="d-flex justify-content-between align-items-center">
-                                    
-                                        <div class="btn-group">
-                                            <button type="button" class="btn btn-sm btn-outline-secondary">
-                                                <a href="<?='Film?filmId='.$movie['id_films']?>">Details</a>
-                                            </button>
-                                        </div>
-                                       
-                                        <small class="text-muted"><?= $movie['annee']?></small>
-                                    </div>
-                                </div>
-                        </div>
-                    </div>
-                    <?php endforeach; ?> 
-                </div>
-                    
-               
-            </div>
-           
+    </header>
+    <!-- End Nav -->
+    <div class="container">
+        <div class="row">
+            <form action="" method="get">
+                <select name='acteur' id="select_id" onchange="getID()">
+                <?php
+                //echo '<label>Genre de film:';
+                //echo "<select name='Genre' onchange=\"getID()\">";
+                foreach ($Allactors as $key => $acteur) {
+                //echo("<h2>".$value."</h2>");
+                echo '<option value="' .$acteur['id_acteurs']. '">' .$acteur['prenom'].' '.$Acteur['nom'].'</option>';
+                }
+                echo "</select>";
+                ?>
+                <button>Valider</button>
+            </form>
+
         </div>
-       
-    </main>
+    </div>
+   
+    
 
 
- 
-  <!-- Bootstrap core JavaScript
+<!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
-    <!-- Bootstrap core JavaScript -->
-    <script src="public/vendor/jquery/jquery.min.js"></script>
-    <script src="public/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-</body>
-</html>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
+    <script src="https://getbootstrap.com/docs/3.3/dist/js/bootstrap.min.js"></script>
+    <script src="https://getbootstrap.com/docs/3.3/assets/js/ie10-viewport-bug-workaround.js"></script>
+    <script>
+    function getID() {
+    d = document.getElementById("select_id").value;
+    //alert(d);
+    document.getElementById('foo').innerHTML = d;
+    }
+    </script>
+    </body>
+    </html>

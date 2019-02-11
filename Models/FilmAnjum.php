@@ -3,8 +3,7 @@
 //Le modèle contient toutes les fonctions d'appel à la base de données.
 
 
-$dbh = new PDO('mysql:host=localhost;dbname=allocine', 'root', 'nGSoeBPL3pxfPTTz',array(PDO::MYSQL_ATTR_INIT_COMMAND => 'SET NAMES utf8'));
-
+$dbh = new PDO('mysql:host=localhost;dbname=allocine', 'root', '');
 
 function getAllMovies() {
     global $dbh;
@@ -23,35 +22,7 @@ function getOneMovie($id) {
     return $movies->fetch();
 }
 
-function getOneRealisateur($id) {
-    global $dbh;
-
-    $realisateur = $dbh->query('SELECT * FROM realisateurs WHERE id_realisateurs='.$id.';');
-
-    return $realisateur->fetch();
-}
-
-function getAllRealisateur() {
-    global $dbh;
-
-    $realisateur = $dbh->query('SELECT * FROM realisateurs');
-
-    return $realisateur->fetchAll();
-}
-
-
-// function getTheActors($id) {
-//     global $dbh;
-
-//     $actors = $dbh->query('SELECT * FROM acteurs JOIN films_acteurs ON acteurs.id_acteurs = films_acteurs.id_acteurs JOIN acteurs ON films.id_films= films_acteurs.id_films WHERE films.id_films='.$actors.';');
-
-//     return $actors->fetchAll();
-// }
-
-
-//  anjum//
-
-function getMoviesByGenders($gender_id) {
+function getMoviesByGenre($gender_id) {
     global $dbh;
 
     $movies = $dbh->query('SELECT * FROM films JOIN films_genres ON films.id_films = films_genres.id_films JOIN genres ON genres.id_genres= films_genres.id_genres WHERE genres.id_genres='.$gender_id.';');
@@ -75,8 +46,4 @@ function getOneGender($id) {
 
     return $genders->fetch();
 }
-
-
-
-
 
