@@ -20,15 +20,4 @@ function getAllGenders() {
     return $Allgenders->fetchAll();
  
 }
-// FROM films_genres.id_films
-function getOneGender($id) {
-    global $dbh;
-
-    $genders = $dbh->query('SELECT genres.*
-    FROM films_genres
-    JOIN genres ON genres.id_genres= films_genres.id_genres
-    WHERE films_genres.id_films='.$id.';');
-
-    return $genders->fetchAll();
-}
 ?>

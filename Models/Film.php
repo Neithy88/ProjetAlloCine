@@ -84,16 +84,16 @@ function getOneActeur($id) {
 
 // }
 
-// function getOneGender($id) {
-//     global $dbh;
+function getOneGender($id) {
+    global $dbh;
 
-//     $genders = $dbh->query('SELECT genres.*
-//     FROM films_genres
-//     JOIN genres ON genres.id_genres= films_genres.id_genres
-//     WHERE films_genres.id_films='.$id.';');
+    $genders = $dbh->query('SELECT genres.*
+    FROM films_genres
+    JOIN genres ON genres.id_genres= films_genres.id_genres
+    WHERE films_genres.id_films='.$id.';');
 
-//     return $genders->fetchAll();
-// }
+    return $genders->fetchAll();
+}
 
 
 

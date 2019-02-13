@@ -1,13 +1,6 @@
-/*!
- * Start Bootstrap - One Page Wonder v5.0.0 (https://startbootstrap.com/template-overviews/one-page-wonder)
- * Copyright 2013-2018 Start Bootstrap
- * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap-one-page-wonder/blob/master/LICENSE)
- */
-
 body {
   font-family: 'Lato', sans-serif;
   background-color:rgba(107, 105, 104, 0.1);
-  background-image: url(image/fond.png) !important;
   background-size:cover;
 }
 
