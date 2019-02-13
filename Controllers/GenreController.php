@@ -6,13 +6,14 @@ include('Models/Genre.php');
 
 //Récupérer les données (ici, on est sur la page d'un film précis donc on récupère un seul film en fonction de l'ID)
 // $id = 2; //Je prends un id arbitrairement, il devra provenir de l'URL en réalité (par ex localhost/MVC2/film/2 pour l'id 2)
-$id= $_GET['Genre'];
+if(isset($_GET['Genre'])){
+    $id=$_GET['Genre'];
+    $genders = getMoviesByGenders($id);
+};
+//  $gender_id=2;
 
-$genders = getMoviesByGender($id);
-
-
+// -------------------
 // print_r($genders);
-
 $Allgenders = getAllGenders();
 // just to understand
 

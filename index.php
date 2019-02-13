@@ -12,6 +12,3 @@ else {
 
 // On inclut le controller en fonction de la page demandée
 include('Controllers/'.$page.'Controller.php');
-
-
-

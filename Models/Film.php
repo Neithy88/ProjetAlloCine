@@ -3,7 +3,7 @@
 //Le modèle contient toutes les fonctions d'appel à la base de données.
 
 
-$dbh = new PDO('mysql:host=localhost;dbname=allocine', 'root', 'nGSoeBPL3pxfPTTz',array(PDO::MYSQL_ATTR_INIT_COMMAND => 'SET NAMES utf8'));
+include('Connexion/ConnectionBDD_A.php');
 
 
 function getAllMovies() {
@@ -64,36 +64,36 @@ function getOneActeur($id) {
 
 //  anjum//
 
-function getMoviesByGenders($gender_id) {
-    global $dbh;
+// function getMoviesByGenders($gender_id) {
+//     global $dbh;
 
-    $movies = $dbh->query('SELECT *
-    FROM films_genres.id_films
-    JOIN genres ON genres.id_genres= films_genres.id_genres
-    WHERE genres.id_genres='.$gender_id.';');
+//     $movies = $dbh->query('SELECT *
+//     FROM films_genres.id_films
+//     JOIN genres ON genres.id_genres= films_genres.id_genres
+//     WHERE genres.id_genres='.$gender_id.';');
 
-    return $movies->fetchAll();
-}
+//     return $movies->fetchAll();
+// }
 
-function getAllGenders() {
-    global $dbh;
+// function getAllGenders() {
+//     global $dbh;
 
-    $Allgenders = $dbh->query('SELECT id_genres,`genre` FROM `genres`');
-    return $Allgenders->fetchAll();
-    //return $Allgenders->fetchAll(PDO::FETCH_COLUMN, 0);
+//     $Allgenders = $dbh->query('SELECT id_genres,`genre` FROM `genres`');
+//     return $Allgenders->fetchAll();
+//     //return $Allgenders->fetchAll(PDO::FETCH_COLUMN, 0);
 
-}
+// }
 
-function getOneGender($id) {
-    global $dbh;
+// function getOneGender($id) {
+//     global $dbh;
 
-    $genders = $dbh->query('SELECT genres.*
-    FROM films_genres
-    JOIN genres ON genres.id_genres= films_genres.id_genres
-    WHERE films_genres.id_films='.$id.';');
+//     $genders = $dbh->query('SELECT genres.*
+//     FROM films_genres
+//     JOIN genres ON genres.id_genres= films_genres.id_genres
+//     WHERE films_genres.id_films='.$id.';');
 
-    return $genders->fetchAll();
-}
+//     return $genders->fetchAll();
+// }
 
 
 

@@ -1,10 +1,15 @@
 <?php
 
-$host = '127.0.0.1';
+$host = 'promo-24.codeur.online';
 	$db = 'Allocine';
 	$user ='root';
-	$pass = 'nGSoeBPL3pxfPTTz';
+	$pass = '';
 	$charset = 'utf8mb4';
+
+	// $db = 'anjumh_allocine';
+	// $user ='anjumh';
+	// $pass = 'hGXzpppioQHWmQ==';
+	// $charset = 'utf8mb4';
 
 	$dbh = "mysql:host=$host;dbname=$db;charset=$charset";
 	$options = [
