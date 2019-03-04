@@ -14,7 +14,7 @@ else {
 }
 
 $realisateurs = getMoviesByRealisateurs($realisateurs_id);
-// print_r($genders);
+
 $Allrealisateurs = getAllRealisateurs();
 
 include('Views/RealisateurView.php');

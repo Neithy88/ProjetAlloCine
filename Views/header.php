@@ -18,8 +18,7 @@
 </head>
 <body>
 
-    <header>
-    <!-- Navigation -->
+    <header><!-- Navigation -->
         <nav class="navbar navbar-expand-lg navbar-dark navbar-custom fixed-top">
             <div class="container">
                 <a class="navbar-brand" href="/ProjetAlloCine/"><img src ="Views/image/logo2.png" alt='logo Movies'></a>

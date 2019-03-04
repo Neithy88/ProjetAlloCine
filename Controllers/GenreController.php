@@ -13,32 +13,7 @@ else {
 
 $genders = getMoviesByGenders($id);
 
-
-// print_r($genders);
 $Allgenders = getAllGenders();
-// just to understand
-
-
-// function getAllGenders() {
-// global $dbh;
-
-// $Allgenders = $dbh->query('SELECT id_genres,`genre` FROM `genres`');
-// return $Allgenders->fetchAll();
-// //return $Allgenders->fetchAll(PDO::FETCH_COLUMN, 0);
-
-// }
-//******************* */
-// function getMoviesByGenre($gender_id) {
-// global $dbh;
-
-// $movies = $dbh->query('SELECT * FROM films JOIN films_genres ON films.id_films = films_genres.id_films JOIN genres ON genres.id_genres= films_genres.id_genres WHERE genres.id_genres='.$gender_id.';');
-
-// return $movies->fetchAll();
-// }
-
-
-
-// print_r($Allgenders);
 
 //inclure la vue
 include('Views/GenreView.php');

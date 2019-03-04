@@ -70,11 +70,6 @@
                         $response = json_decode($response, true); //because of true, it's in an array
                         echo $response['Ratings'][0]['Value']."<br>";
 
-
-
-
-
-
                         // AVEC ENTREE ID IMDB DANS BASE DE DONNEES
 
                         $curl = curl_init();

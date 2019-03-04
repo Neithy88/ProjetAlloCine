@@ -1,7 +1,7 @@
 <?php
 //Le modèle contient toutes les fonctions d'appel à la base de données.
 include('Connexion/ConnectionBDD_A.php');
-// print_r($genders);
+
 function getMoviesByRealisateurs($realisateurs_id) {
     global $dbh;
     $realisateurs = $dbh->query('SELECT *
@@ -17,5 +17,3 @@ function getAllRealisateurs() {
     $Allrealisateurs = $dbh->query('SELECT * FROM `realisateurs`');
     return $Allrealisateurs->fetchAll();
     } 
-
-    // $Allrealisateur = $dbh->query('SELECT id_realisateurs,nom,prenom FROM `realisateurs`');
