@@ -32,7 +32,7 @@
             <a class="nav-link" href="">Film</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Par genre</a>
+            <a class="nav-link" href="Genre">Par genre</a>
           </li>
         </ul>
         <form class="form-inline mt-2 mt-md-0">
@@ -43,11 +43,6 @@
     </nav>
 
 
-
-
-
-   
-   
     </header>
 <!-- ---------------------------mages of the films------------------------------------- -->
     <main role="main">
