@@ -8,7 +8,7 @@ $host = 'promo-24.codeur.online';
 
 	// $db = 'anjumh_allocine';
 	// $user ='anjumh';
-	// $pass = 'hGXzpppioQHWmQ==';
+	// $pass = '';
 	// $charset = 'utf8mb4';
 
 	$dbh = "mysql:host=$host;dbname=$db;charset=$charset";
