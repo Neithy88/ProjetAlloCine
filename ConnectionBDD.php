@@ -1,10 +1,11 @@
 <?php
 
-$host = '127.0.0.1';
+$host = 'localhost';
 	$db = 'Allocine';
 	$user ='root';
 	$pass = 'nGSoeBPL3pxfPTTz';
 	$charset = 'utf8mb4';
+	$base_url = "localhost/projets/AlloCine-anjum/";
 
 	$dbh = "mysql:host=$host;dbname=$db;charset=$charset";
 	$options = [

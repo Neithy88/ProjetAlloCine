@@ -1,22 +1,22 @@
 <?php
 //le controlleur inclut le ou les modèles
 include('Models/Film.php');
-// include('Models/Genre.php');
-include('Models/Acteur.php');
+
+include('Models/Realisateur.php');
 //Récupérer les données (ici, on est sur la page d'un film précis donc on récupère un seul film en fonction de l'ID)
  //Je prends un id arbitrairement, il devra provenir de l'URL en réalité (par ex localhost/MVC2/film/2 pour l'id 2)
 
- if(isset($_GET['Acteur'])){
-    $acteurs_id=$_GET['Acteur'];
+ if(isset($_GET['Realisateur'])){
+    $realisateurs_id=$_GET['Realisateur'];
 }
 else {
-   $acteurs_id = 1;
+   $realisateurs_id = 1;
 }
 
-$acteurs = getMoviesByActors($acteurs_id);
+$realisateurs = getMoviesByRealisateurs($realisateurs_id);
 
-$Allacteur = getAllActeurs();
+$Allrealisateurs = getAllRealisateurs();
 
-include('Views/ActeurView.php');
+include('Views/RealisateurView.php');
 
 ?> 
