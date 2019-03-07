@@ -19,9 +19,9 @@
             <div class="row">
                  <div class="col md-6 ">
                         <?php foreach ($genders as $key => $gender) : ?>
-                                        <div class="col-md-4">
+                                        <div id ="parcatigory"class="col-md-4">
                                             <div class="card mb-4 shadow-sm">
-                                                <img class="card-img-top" src="<?= 'Views/image/'.$gender['image']?>"
+                                                <img class="card-img-top"  src="<?= 'Views/image/'.$gender['image']?>"
                                                     alt="<?=$gender['titre']?>">
                                                 <div class="card-body">
                                                     <div class="d-flex justify-content-between align-items-center">
