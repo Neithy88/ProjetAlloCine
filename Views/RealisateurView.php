@@ -1,47 +1,54 @@
 <?php include 'header.php';?> 
     <!-- Start Main -->
-    <main role="main" id="mainview">
+    <main role="main">
         <div class="container">
-            <div class="row">
+            <div class="form-row">
                 <div class="col md-6 ">
-                     <form action="" method="get">
-                        <select name='Realisateur' id="select_id" onchange="getID()">
+                    <form action="" method="get">
+                        <select class="form-control" name='Realisateur' id="select_id" onchange="getID()">
                                 <?php foreach ($Allrealisateurs as $value) {
                                     echo '<option value="' .$value['id_realisateurs']. '">' .$value['prenom']. " ".$value['nom']. '</option>';
                                     } ?>
                         </select>
-                                    
-                        <button>Valider</button>
-                    </form>
-                    </div>
                 </div>
-             </div>
-            <div class="row">
-                 <div class="col md-6 ">
-                        <?php foreach ($realisateurs as $key => $realisateur) : ?>
-                                        <div class="col-md-4">
-                                            <div class="card mb-4 shadow-sm">
-                                                <img class="card-img-top" src="<?= 'Views/image/'.$realisateur['image']?>"
-                                                    alt="<?=$realisateur['titre']?>">
-                                                <div class="card-body">
-                                                    <div class="d-flex justify-content-between align-items-center">
-                                                        <div class="btn-group">
-                                                            <a href="<?='Film?filmId='.$realisateur['id_films']?>">Details</a>
-                                                    
+                        <div class="col-md-6">           
+                            <button class="btn btn-primary">Valider</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        
+        <div class="album py-5">    
+            <div class="container">
+            
+                <div class="row">
+                            <?php foreach ($realisateurs as $key => $realisateur) : ?>
+                                            <div class="col-md-4">
+                                                <div class="card mb-4 shadow-sm">
+                                                    <img class="card-img-top" src="<?= 'Views/image/'.$realisateur['image']?>"
+                                                        alt="<?=$realisateur['titre']?>">
+                                                    <div class="card-body">
+                                                        <div class="d-flex justify-content-between align-items-center">
+                                                            <div class="btn-group">
+                                                                <a href="<?='Film?filmId='.$realisateur['id_films']?>">Details</a>
+                                                        
+                                                            </div>
+                                                        
                                                         </div>
                                                     
                                                     </div>
                                                 
                                                 </div>
-                                            
                                             </div>
-                                        </div>
-                            <?php endforeach; ?>
+                                <?php endforeach; ?>
+                    
+        
                 </div>
-       
-            </div>
-                         
+            </div>             
         </div>
+        
+            
     </main>
 
 
@@ -52,12 +59,11 @@
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
     </script>
+     <script src="public/vendor/jquery/jquery.min.js"></script>
+    <script src="public/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
     <script>
     window.jQuery || document.write('<script src="../../assets/js/vendor/jquery-slim.min.js"><\/script>')
     </script>
-    <script src="../../assets/js/vendor/popper.min.js"></script>
-    <script src="../../dist/js/bootstrap.min.js"></script>
-    <script src="../../assets/js/vendor/holder.min.js"></script>
     <script>
     function getID() {
         d = document.getElementById("select_id").value;
@@ -65,6 +71,7 @@
         document.getElementById('foo').innerHTML = d;
     }
     </script>
+   
 </body>
 
 </html>

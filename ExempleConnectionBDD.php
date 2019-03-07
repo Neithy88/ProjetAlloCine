@@ -1,11 +1,11 @@
 <?php
 
 $host = 'localhost';
-	$db = 'Allocine';
-	$user ='root';
-	$pass = 'nGSoeBPL3pxfPTTz';
+	$db = 'dbname';
+	$user ='root or your nameuser';
+	$pass = 'pass';
 	$charset = 'utf8mb4';
-	$base_url = "localhost/projets/projetAlloCine/";
+	$base_url = "localhost ou promo24/....../....../";
 
 	$dbh = "mysql:host=$host;dbname=$db;charset=$charset";
 	$options = [

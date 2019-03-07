@@ -1,10 +1,10 @@
 <?php include 'header.php';?> 
     <!-- Start Main -->
-    <main role="main" id="mainview">
-        <div class="container">
+    <main role="main" class="mainfilm" >
+        <div class="container containerwhite">
             <div class="row">
                 <div class="col md-6 ">
-                <h2><img src="Views/image/clapperboard1.png" alt="claplogo" id="clapp"><?=$movie['titre']?></h2>
+                <h2><img src="public/image/clapperboard1.png" alt="claplogo" id="clapp"><?=$movie['titre']?></h2>
                     <ul>
                     
                         <li><h3>Année de sortie :</h3> <?=$movie['annee']?></li>
@@ -106,9 +106,9 @@
             </div>
         </div>
         
-        <div class="container" id="description">
+        <div class="container" id="description" class="containerwhite">
             <div class="row">
-            <h4><img src="Views/image/camera2.png" alt="claplogo" id="camera">Synopsis :</h4>
+            <h4><img src="public/image/camera2.png" alt="claplogo" id="camera">Synopsis :</h4>
                 <p><?=$movie['description']?></p>
 
                 <div class="btn-group">
@@ -131,7 +131,7 @@
      <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
-    {# <script>
+    <script>
     var xhr = new XMLHttpRequest();
                         xhr.open('GET', 'http://www.omdbapi.com/?i=tt0848228&apikey=9f8a2026', true);
                         xhr.send(null);
@@ -144,7 +144,7 @@
                         
                         }
                         var id_imdb = "<?php echo $film['imdbID']; ?>";
-    </script> #}
+    </script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
     <script src="https://getbootstrap.com/docs/3.3/dist/js/bootstrap.min.js"></script>

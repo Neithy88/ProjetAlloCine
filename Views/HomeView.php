@@ -1,12 +1,12 @@
 <?php include 'header.php';?>   <!-- Navigation -->
     
     <main role="main">
-        <div class="album py-5 bg-light">  
+        <div class="album py-5">  
             <div class="container"> 
                 <div class="row">
                 <?php foreach ($movies as $key => $movie) : ?>
                     <div class="col-md-4">
-                        <div class="card mb-4 shadow-sm">
+                        <div class="card mb-4 shadow-sm bg-light">
                             <img class="card-img-top" src= "<?= 'Views/image/'.$movie['image']?>"alt="<?=$movie['titre']?>">
                                 <div class="card-body">
                                     <div class="d-flex justify-content-between align-items-center">
