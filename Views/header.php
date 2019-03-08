@@ -39,6 +39,9 @@
                             <li class="nav-item">
                                 <a class="nav-link" href="Realisateur">Réalisateur</a>
                             </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="Form">Ajoute ton film :)</a>
+                            </li>
                         </ul>
                 </div>
             </div>
