@@ -14,5 +14,3 @@ foreach ($movies as $key => $movie) {
 
 //inclure la vue
 include('Views/HomeView.php');
-
-

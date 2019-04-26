@@ -16,4 +16,3 @@ foreach ($genders as $key => $genre) {
 }
 //inclure la vue
 include('Views/FilmView.php');
-?>

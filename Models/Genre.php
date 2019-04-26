@@ -1,6 +1,6 @@
 <?php
 //Le modèle contient toutes les fonctions d'appel à la base de données.
-include('Connexion/ConnectionBDD_A.php');
+include('ConnectionBDD.php');
 
 function getMoviesByGenders($gender_id) {
     global $dbh;
@@ -20,4 +20,3 @@ function getAllGenders() {
     return $Allgenders->fetchAll();
  
 }
-?>

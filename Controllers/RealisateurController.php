@@ -18,5 +18,3 @@ $realisateurs = getMoviesByRealisateurs($realisateurs_id);
 $Allrealisateurs = getAllRealisateurs();
 
 include('Views/RealisateurView.php');
-
-?> 

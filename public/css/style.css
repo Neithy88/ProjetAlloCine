@@ -1,9 +1,30 @@
 
 
 main{
-    
-    padding-top: 5%;
-    margin-top:5%;
+    padding-top: 10%;
+    margin-bottom:5%;
+
+}
+.mainfilm{
+  padding-top:5%;
+  
+}
+.containerwhite{
+  background-color: #fff !important;
+  /* padding-top: 2em; */
+  padding-bottom: 2em;
+}
+
+.form-row{
+  margin-top:2em;
+}
+
+#description{
+  background-color: #fff !important;
+  padding-top: 2em;
+  padding-bottom: 2em;
+  padding-left: 2em;
+  padding-right: 2em;
 }
 
 
@@ -21,9 +42,9 @@ main{
 .genre{
 	margin-top: 50%;
 }
-
-
-#parcatigory{
-  padding-top: 100px;
-  margin: 0 auto 0 auto ;
+.mybutton{
+  color: #0e0d0d;
+  background-color: #e8ae89;
 }
+
+

@@ -18,5 +18,3 @@ $acteurs = getMoviesByActors($acteurs_id);
 $Allacteur = getAllActeurs();
 
 include('Views/ActeurView.php');
-
-?> 

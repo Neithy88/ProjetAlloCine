@@ -17,5 +17,3 @@ $Allgenders = getAllGenders();
 
 //inclure la vue
 include('Views/GenreView.php');
-
-?>
