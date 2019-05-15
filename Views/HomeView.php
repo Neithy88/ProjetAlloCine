@@ -12,7 +12,7 @@
                             <div class="card-body">
                                 <div class="d-flex justify-content-between align-items-center">
                                     <div class="btn-group">
-                                        <a href="<?= 'Film?filmId=' . $movie['id_films'] ?>">Details</a>
+                                        <a class="customlink" href="<?= 'Film?filmId=' . $movie['id_films'] ?>">Details</a>
                                     </div>
                                     <small class="text-muted"><?= $movie['annee'] ?></small>
                                 </div>

@@ -13,7 +13,7 @@
                     </select>
             </div>
             <div class="col md-6">
-                <button class="btn btn-primary" type="submit">Valider</button>
+            <button class="btn" type="submit">Valider</button>
             </div>
             </form>
 
@@ -32,9 +32,9 @@
                             <div class="card-body">
                                 <div class="d-flex justify-content-between align-items-center">
                                     <div class="btn-group">
-                                        <a href="<?= 'Film?filmId=' . $acteur['id_films'] ?>">Details</a>
+                                        <a class="customlink" href="<?= 'Film?filmId=' . $acteur['id_films'] ?>">Details</a>
 
-                                    </div>
+                                    </div> 
 
                                 </div>
 
