@@ -2,3 +2,4 @@ info.php
 .htaccess
 ConnectionBDD_A.php
 Models/ConnectionBDD.php
+Views/ConnectionBDD.php
