@@ -12,11 +12,11 @@
                         } ?>
                     </select>
             </div>
-            <div class="col-md-6">
-                <button class="btn btn" type="submit">Valider</button>
-            </div>
+                    <div class="col-md-6">
+                        <button class="btn btn" type="submit">Valider</button>
+                    </div>
 
-            </form>
+                </form>
         </div>
     </div>
 
@@ -30,21 +30,16 @@
                             <div class="card-body">
                                 <div class="d-flex justify-content-between align-items-center">
                                     <div class="btn-group">
-                                        <a  class="customlink" href="<?= 'Film?filmId=' . $gender['id_films'] ?>">Details</a>
+                                        <a class="customlink" href="<?= 'Film?filmId=' . $gender['id_films'] ?>">Details</a>
                                     </div>
-
                                 </div>
-
                             </div>
-
                         </div>
                     </div>
                 <?php endforeach; ?>
-
             </div>
         </div>
     </div>
-
 </main>
 
 

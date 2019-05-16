@@ -2,12 +2,12 @@
 
 	$host = 'promo-24.codeur.online';
 	$db = 'anjumh_allocine';
-	$user ='';
+	$user ='anjumh';
 	$pass = '';
 	$charset = 'utf8mb4';
 
 // $db = 'anjumh_allocine';
-// $user ='';
+// $user ='anjumh';
 // $pass = '';
 // $charset = 'utf8mb4';
 

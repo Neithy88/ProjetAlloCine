@@ -11,13 +11,13 @@
                         } ?>
                     </select>
             </div>
-            <div class="col-md-6">
-            <button class="btn btn" type="submit">Valider</button>
-            </div>
-            </form>
+                    <div class="col-md-6">
+                        <button class="btn btn" type="submit">Valider</button>
+                    </div>
+                </form>
         </div>
     </div>
-    </div>
+
 
     <div class="album py-5">
         <div class="container">
@@ -31,23 +31,15 @@
                                 <div class="d-flex justify-content-between align-items-center">
                                     <div class="btn-group">
                                         <a class="customlink" href="<?= 'Film?filmId=' . $realisateur['id_films'] ?>">Details</a>
-
                                     </div>
-
                                 </div>
-
                             </div>
-
                         </div>
                     </div>
                 <?php endforeach; ?>
-
-
             </div>
         </div>
     </div>
-
-
 </main>
 
 

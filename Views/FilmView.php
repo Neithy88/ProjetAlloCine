@@ -120,7 +120,7 @@
             <p><?= $movie['description'] ?></p>
 
             <div class="btn-group">
-           <a id="customlink2" href="Home">Home</a>
+                <a id="customlink2" href="Home">Home</a>
             </div>
 
         </div>

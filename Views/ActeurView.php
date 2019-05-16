@@ -12,11 +12,10 @@
                         } ?>
                     </select>
             </div>
-            <div class="col md-6">
-            <button class="btn" type="submit">Valider</button>
-            </div>
-            </form>
-
+                    <div class="col md-6">
+                    <button class="btn" type="submit">Valider</button>
+                    </div>
+                 </form>
         </div>
     </div>
 
