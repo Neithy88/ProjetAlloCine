@@ -10,7 +10,6 @@
     <link rel="stylesheet" href="public/css/style.css">
     <link href="navbar-top-fixed.css" rel="stylesheet">
     <link href="public/css/style.css" rel="stylesheet">
-    <script type="text/javascript"></script>
     <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
     <!-- Bootstrap core CSS -->
     <link href="public/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">

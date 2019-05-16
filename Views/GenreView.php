@@ -11,7 +11,7 @@
                             echo '<option value="' . $value['id_genres'] . '">' . $value['genre'] . '</option>';
                         } ?>
                     </select>
-            </div>
+           
                     <div class="col-md-6">
                         <button class="btn btn" type="submit">Valider</button>
                     </div>
@@ -19,7 +19,7 @@
                 </form>
         </div>
     </div>
-
+    </div>
     <div class="container">
         <div class="album py-5">
             <div class="row">
