@@ -34,7 +34,7 @@
                                         <a class="customlink" href="<?= 'Film?filmId=' . $acteur['id_films'] ?>">Details</a>
 
                                     </div> 
-
+                                    <small class="text-muted"><?=  $acteur['annee'] ?></small>
                                 </div>
 
                             </div>

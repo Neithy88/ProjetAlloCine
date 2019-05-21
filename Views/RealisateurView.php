@@ -32,6 +32,7 @@
                                     <div class="btn-group">
                                         <a class="customlink" href="<?= 'Film?filmId=' . $realisateur['id_films'] ?>">Details</a>
                                     </div>
+                                    <small class="text-muted"><?= $realisateur['annee'] ?></small>
                                 </div>
                             </div>
                         </div>

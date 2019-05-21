@@ -1,35 +1,35 @@
 <?php include 'header.php'; ?>
 <!-- Start Main -->
 <main role="main" class="mainfilm">
-    <div class="container containerwhite">
+    <div class="container containerwhite detail-fims">
         <div class="row">
             <div class="col md-6 ">
                 <h2><img src="public/image/clapperboard1.png" alt="claplogo" id="clapp"><?= $movie['titre'] ?></h2>
                 <ul>
 
-                    <li>
+                    <li class="li-detail">
                         <h3>Année de sortie :</h3> <?= $movie['annee'] ?>
                     </li>
-                    <li>
+                    <li class="li-detail">
                         <h3>Réalisé par :</h3>
                         <?php foreach ($realisateurs as $key => $realisateur) {
                             echo $realisateur['prenom'] . ' ' . $realisateur['nom'];
                         } ?>
                     </li>
-                    <li>
+                    <li class="li-detail">
                         <h3>Genre :</h3>
                         <?php foreach ($genders as $key => $gender) {
                             echo $gender['genre'] . ' ';
                         } ?>
                     </li>
-                    <li>
+                    <li class="li-detail">
                         <h3>Acteurs :</h3> <?php
                                             foreach ($acteurs as $key => $acteur) {
                                                 echo $acteur['prenom'] . ' ' . $acteur['nom'] . '<br/>';
                                             } ?>
                     </li>
 
-                    <li>
+                    <li class="li-detail">
                         <h3>Note :</h3>
 
 
@@ -106,35 +106,35 @@
                 </ul>
             </div>
             <div class="col md-6">
-                <img class="card-img-top" src="<?= 'Views/image/' . $movie['image'] ?>" alt="<?= $movie['titre'] ?>">
+                <img id="custom-card" class="card-img-top" src="<?= 'Views/image/' . $movie['image'] ?>" alt="<?= $movie['titre'] ?>">
             </div>
 
+            <div class="row" id="row-detail">
+                <h2><img src="public/image/camera2.png" alt="claplogo" id="camera">Synopsis :</h2>
+                <p><?= $movie['description'] ?></p>
 
-
-        </div>
-    </div>
-
-    <div class="container" id="description" class="containerwhite">
-        <div class="row">
-            <h4><img src="public/image/camera2.png" alt="claplogo" id="camera">Synopsis :</h4>
-            <p><?= $movie['description'] ?></p>
-
-            <div class="btn-group">
-                <a id="customlink2" href="Home">Home</a>
             </div>
 
         </div>
     </div>
 
-</main>
+    <!-- <div class="container" id="description" class="containerwhite"> -->
 
+    </div>
 
-<!-- <footer class="footer">
+    <footer class="footer">
       <div class="container">
        
-        <span class="text-muted">Created by Anjum Heriau, Aurélie Thècle Augustin, Ophélie Donizetti, Alexandra Moullet </span>
+        <span>Created by Anjum Heriau, Aurélie Thècle Augustin, Ophélie Donizetti, Alexandra Moullet </span>
       </div>
-    </footer> -->
+    </footer>
+</main>
+
+ <!-- <footer class="footer">
+      <div class="container">
+        <span>Created by: Aurélie Thècle Augustin, Ophélie Donizetti, Alexandra Moullet et Anjum Herieau </span>
+      </div>
+ </footer> -->
 
 <!-- Bootstrap core JavaScript
     ================================================== -->

@@ -11,7 +11,7 @@
                             echo '<option value="' . $value['id_genres'] . '">' . $value['genre'] . '</option>';
                         } ?>
                     </select>
-           
+             </div>
                     <div class="col-md-6">
                         <button class="btn btn" type="submit">Valider</button>
                     </div>
@@ -32,6 +32,7 @@
                                     <div class="btn-group">
                                         <a class="customlink" href="<?= 'Film?filmId=' . $gender['id_films'] ?>">Details</a>
                                     </div>
+                                    <small class="text-muted"><?= $gender['annee'] ?></small>
                                 </div>
                             </div>
                         </div>
