@@ -32,7 +32,6 @@
                                 <div class="d-flex justify-content-between align-items-center">
                                     <div class="btn-group">
                                         <a class="customlink" href="<?= 'Film?filmId=' . $acteur['id_films'] ?>">Details</a>
-
                                     </div> 
                                     <small class="text-muted"><?=  $acteur['annee'] ?></small>
                                 </div>

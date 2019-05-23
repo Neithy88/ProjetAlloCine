@@ -1,7 +1,7 @@
 <?php include 'header.php'; ?>
 <!-- Navigation -->
 
-<main role="main">
+<main class="main">
     <div class="album py-5">
         <div class="container">
             <div class="row">
